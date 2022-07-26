@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<table>
+    <thead>
+    <tr>
+        <th> Name </th>
+        <th> Year </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:if="${myCars.empty}">
+        <td colspan="2"> No Books Available </td>
+    </tr>
+    <tr th:each="car : ${myCars}">
+        <td><span th:text="${car.getName()}"> Name </span></td>
+        <td><span th:text="${car.getYear()}"> Year </span></td>
+    </tr>
+    </tbody>
+</table>
